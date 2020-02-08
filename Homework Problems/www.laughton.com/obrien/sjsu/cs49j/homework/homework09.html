@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework09.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:25 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 9</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">9A </p>
+<p>You are given a <code>Student</code> class. (Copy it into Eclipse) A <code>Student</code> has a name and an ArrayList of grades (Doubles) as instance variables. </p>
+<p>Write a class named <code>JavaClass</code>  which manages Student objects. </p>
+<p>You will provide the following:</p>
+<ul>
+  <li><code>public JavaClass()</code> a no-argument constructor. </li>
+  <li><code>public void add(Student s) </code>adds the student to this <code>JavaClass</code> (to an ArrayList)</li>
+  <li><code>public String hasAverageGreaterThan(double target)</code> gets the name of the first student in the <code>JavaClass</code> who has an average greater than the target or the empty string. Do not use break. Do not return from the middle of the loop. Use a boolean flag if you need to terminate early.</li>
+  <li><code>public ArrayList&lt;String&gt; getStudents()</code> gets an ArrayList&lt;String&gt; containing the names of all the Students in this <code>JavaClass</code>. </li>
+  <li><code>public Student bestStudent()</code> gets the Student with the highest average in this <code>JavaClass</code> or null there are no students</li>
+  <li><code>public String toString</code>() gets a string represent the students using ArrayList's toString method</li>
+</ul>
+<p>Provide Javadoc</p>
+<p><a href="http://www.codecheck.it/files/1907182456aqcypqwk1wzaa58ww00qhazn5">Codecheck URL</a></p>
+<p style="background-color: #ccffff">9B </p>
+<p>Write the class <code>Staff</code>. It contains methods that manipulate an ArrayList of Strings representing the names of staff members. The constructor takes an ArrayList of String names as a parameter. In addition to the constructor, you need to implement the following methods</p>
+<p>The methods</p>
+<ul>
+  <li><code>public boolean equals(Staff other)</code> - Determines if the other <code>Staff</code> contains all the same elements in the same order as this <code>Staff</code></li>
+  <li><code>public boolean sameContents(Staff other)</code> - Determines if the other <code>Staff</code> and this Staff contain exactly the same elements but in any order </li>
+  
+  <li><code>public void replaceVowelsWith(String text)</code> Replaces each vowel in every ArrayList element with the replacement value text. Assume the vowels are aeiouyAEIOUY </li>
+  <li><code>public String mostVowels()</code> Gets the staff member whose name has the most vowels. If more than one has that number of vowels, return the first. Return null if the list is empty. Assume the vowels are aeiouAEIOU</li>
+  <li><code>public String toString</code>() gets a string represent ion using ArrayList's toString method</li>
+</ul>
+<p><a href="http://www.codecheck.it/files/190718244038g67idz1kkwkmf9ykkrenvvu">Codecheck URL</a></p>
+
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework09.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:25 GMT -->
+</html>

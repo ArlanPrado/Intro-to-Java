@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework13.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 13</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">A </p>
+<p>Write a <code>Snack</code> class as a subclass of <code>Product</code>. In addition to description and price, <code>Snack</code> has integer instance variable gramsOfFat. </p>
+<p>Write a method <code>getGramsOfFat</code>. </p>
+<p>Write a method <code>isHealthier</code> which returns true if this Snack has fewer grams of fat than the parameter Snack.</p>
+<p>Include toString and equals. </p>
+<p>Snack should implement <code>Comparable</code> interface. <code>Snacks</code> are ordered first by gramsOfFat with the <code>Snack</code> with the fewer grams of fat coming first. If the grams of fat are the same order by price with the lowest price coming first, If prices are also equal, order alphabetically by description </p>
+<p>Implement the  <code>Clonable</code> interface</p>
+<p><a href="http://www.codecheck.it/files/16120717451g4obgio47zkuhvy552zzxu4a">Codecheck URL</a></p>
+<p style="background-color: #ccffff">B </p>
+<p>You are given a <code>CollegeWrestler</code> class. A <code>CollegeWrestler</code> has a String name and a weight as a double. We need to order wrestlers in two ways: alphabetically by name and by weight. We can not do this with the <code>Comparable</code> interface.</p>
+<p>Create two <code>Comparator</code> objects, one to handle each type of ordering. You can do this  several different ways. If you write separate classes, call then CollegeWrestlerComparatorByWeight and CollegeWrestlerComparatorByName. If you use inner classes or anonymous inner classes in <code>ComparatorRunner</code>, just leave the text area for the Comparator files empty.</p>
+<p>Then complete the <code>ComparatorRunner</code> class. It defines an ArrayList of <code>CollegeWrestlers</code>. </p>
+<p>Sort by weight and then loop through the ArrayList printing the weight and then the name of each <code>CollegeWrestlers</code> (use Collections.sort)</p>
+<p>Sort by name and then loop through the ArrayList printing the name and then the weight of each <code>CollegeWrestlers</code>.(use Collections.sort)</p>
+<p><a href="http://www.codecheck.it/files/16120703303nrlsr5xy62egujep1otrmb9p">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework13.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+</html>

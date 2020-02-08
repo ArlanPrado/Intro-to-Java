@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework03.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:24 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 3</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">3A </p>
+<p>Vulcan Poker is a  game from Alpha Centari. It is a game of skill not luck. To make the game competitive among players of different skill levels, a score adjustment system has been devised. Each player has an adjustment value ranging from 0 to 40. The better the player, the lower the adjustment value. After a round of play, every player's adjustment value is added to his / her score. The player with the highest final score is the winner.</p>
+<p>For this assignment, you will complete the <code>Player</code> class to model a player of Vulcan Poker. There is no game play here, just the player. I supply the tester. Your class will not have a main method.</p>
+<p>The <code>Player</code> class has:</p>
+<ul>
+  <li>a constructor that takes a String name and an int adjustment value in that order.
+    <ul>
+      <li>That means the class will need instance variables to remember the name and adjustment value. Make them private</li>
+    </ul>
+  </li>
+  <li>a method <code>getName()</code> which returns the name of the player</li>
+  <li>a method <code>getAdjustment()</code> that returns the adjustment value</li>
+  <li>a method <code>setAdjustment()</code> which will assign a new adjustment value to this player
+    <ul>
+      <li>The method will take a the new value as a adjustment value (stuff in parentheses are parameters)</li>
+    </ul>
+  </li>
+</ul>
+<p>Provide Javadoc for the constructor and all methods. The Javadoc for the class is given to you</p>
+<a href="http://www.codecheck.it/files/19072217472g7fwrh2um6icai3ro2y6vt2a"><br>
+</a>
+<p><a href="http://www.codecheck.it/files/19072217472g7fwrh2um6icai3ro2y6vt2a">Codecheck URL</a></p>
+<p style="background-color: #ccffff">3B </p>
+<p>Write a <code>Counter</code> class  that models a simple  machine to tally the votes on a California proposition. </p>
+<p><code>Counter</code>has a constructor with no parameters and initializes the yes and no counts</p>
+<p> It has methods</p>
+<ul>
+  <li><code>voteYes</code></li>
+  <li><code>voteNo</code></li>
+  <li><code>getYesVotes</code></li>
+  <li><code>getNoVotes</code></li>
+</ul>
+<p>There is no starter file for this project, but there is a tester.</p>
+<p>Provide Javadoc for the constructor, all methods and the class itself.</p>
+<p><a href="http://www.codecheck.it/files/1907221756b7c5p0hjydzdf6n39ciouu04s">Codecheck URL</a></p>
+<p style="background-color: #ccffff">3C </p>
+<p>Write a <code>CityBus</code> class. A <code>CityBus</code> moves along a straight route from the start to the end . There are stops every 5 blocks. The track is 50 blocks long. The <code>CityBus</code> moves from one stop to another. It can either move toward the end (+ direction) or towards the start (- direction). Write a class <code>CityBus</code> that models this behavior.</p>
+<p><code>CityBus</code> class has a default constructor that sets the bus at the start moving toward the end (+ direction). You can think of this as a number line with only positive numbers and zero. If the bus is pointing towards the end, moving increases the stop number. If the bus is pointing towards the start, moving decreases the stop number</p>
+<p><code>CityBus</code> has these methods</p>
+<ul>
+  <li><code>public void move(int numberOfStops)</code> - moves the <code>CityBus</code> the specified number of stops in the current direction. Assume the user is well behaved and never tries to move beyond the start or end of the track</li>
+  <li><code>public void turn()</code> - reverses the direction of the <code>CityBus</code>. If the bus was moving from start to end (+ direction), after the method executes, the bus will be moving toward the start (- direction)</li>
+  <li><code>public int distanceToStart()</code> - calculates the distance the bus is from the start in blocks</li>
+  <li><code>public int distanceToEnd()</code> - calculates the distance the bus is from the end in blocks</li>
+</ul>
+<p><strong>Do not use if statements.</strong> </p>
+<p>Think about what information needs to be remembered and define instance variables to remember that information.</p>
+<p>HINT: You can represent the direction with  an integer: +1 if the bus is moving toward the end; -1 if it is moving towards the start. Use that information in the move method to move in the correct direction.</p>
+<p>HINT: Remember that each stop is 5 blocks from the previous stop. So if a bus has moved 3 stops along the route, its distance from the start is 15. It will probably be easiest to call the start location stop number 0.</p>
+<p>Javadoc for the class might look like this:</p>
+<pre>/**  <br> *   Models a bus traveling on a straight route going either direction  <br> */</pre>
+<p><a href="http://www.codecheck.it/files/190722181787plzbdwd7ezcjs8ubean19bp">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework03.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:24 GMT -->
+</html>

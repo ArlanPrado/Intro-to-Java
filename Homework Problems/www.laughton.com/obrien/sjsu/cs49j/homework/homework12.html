@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework12.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 12</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">12A </p>
+<p>In this problem, you will write a tester class <code>PolymorphismRunner</code>. Use the three classes from 11b: <code>BankAccount</code>,<code> StudentAccount </code>and <code>NewWorldAccount</code>. Use your <code>tudentAccount </code>and <code>NewWorldAccount</code> classes. If you do not have working versions, you can get them from homework solutions. If they are not posted yet, ask me, and I will post them.</p>
+<p>Add the code described below to the main method</p>
+<p>Create an array of BankAccounts that can hold 5 objects. You will fill the array with  the objects specified in the table</p>
+<table width="69%" border="1" cellspacing="1" cellpadding="1">
+  <tr>
+    <th width="19%" scope="col">Index</th>
+    <th width="25%" scope="col">Type</th>
+    <th width="26%" scope="col"><p>InitialBalance</p></th>
+    <th width="30%" scope="col"><p>timeToMaturity<br>
+    </p></th>
+  </tr>
+  <tr>
+    <td>0</td>
+    <td>BankAccount</td>
+    <td>1000</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>StudentAccount</td>
+    <td>1000</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>NewWorldAccount</td>
+    <td>3000</td>
+    <td>12</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>StudentAccount</td>
+    <td>1000</td>
+    <td>&nbsp;</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>NewWorldAccount</td>
+    <td>2000</td>
+    <td>24 <span class="attention">(updated Oct 24)</span></td>
+  </tr>
+</table>
+<p>Loop through the array </p>
+<ul>
+  <li>Deposit $200 in each account</li>
+  <li class="attention">Call each account's endOfMonth method Update Oct 24</li>
+  <li>Withdraw $100 from each account</li>
+  <li>Call each account's endOfMonth method and then print the word <em>Balance:</em> and a space, followed by the balance in the account to 2 decimal places</li>
+  <li>If the account is an instance of <code>NewWorldAccount</code>, cast it to a <code>NewWorldAccount</code>  and print the<em> Time to maturity:</em> and a space followed by the time to maturity</li>
+</ul>
+<p>Your output should look like this</p>
+<pre class="example">Balance: 1080.00
+Balance: 1100.00
+Balance: 3085.76
+Time to maturity: 10
+Balance: 1100.00
+Balance: 2083.93
+Time to maturity: 22</pre>
+<p><a href="http://www.codecheck.it/files/190803235447ufpllaojc96q8e6b2vn8oat">Codecheck URL</a></p>
+<p style="background-color: #ccffff">12B </p>
+<p>In both the <code>BankAccount</code> and <code>NewWorldAccount</code> from hw11b, override the <code>toString</code> and <code>equals</code> methods. In <code>NewWorldAccount</code>, do not repeat the work from the super class. Call super. </p>
+<p><a href="http://www.codecheck.it/files/1908040107e0b48224ew73zf0k2s37t3jo6">Codecheck URL</a></p>
+<p style="background-color: #ccffff">12C </p>
+<p>In both <code>Critter</code> and <code>LethargicCritter</code> classes from 11c, add <code>equals</code> and <code>toString</code> methods. In the Critter class toString method, you will need to get a string representation of the history ArrayList. You can can do that by calling history.toString(). Call super.toString in <code>LethargicCritter</code>'s toString. </p>
+<p><a href="http://www.codecheck.it/files/190804043513mmydxdf1ryodzbjhkhskix5">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework12.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+</html>

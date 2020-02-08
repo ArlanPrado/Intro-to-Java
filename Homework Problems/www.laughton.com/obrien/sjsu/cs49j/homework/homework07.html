@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework07.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:24 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 7</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">7A </p>
+<p>Write an application called  <code>InputWork</code>. In the main method you will use a loop to read a collection of doubles. Stop reading when the input can not be converted to a double. Use this exact prompt: System.out.print(&quot;Enter a double or Q to quit: &quot;); Copy and paste it. That is what I did when I coded the model solution.</p>
+<p>Note: you will actually quit on any string that can not be converted to a double.</p>
+Do the following things:
+<br />
+<ul>
+  <li>Print a string of the  inputs that have an integer value (like 4.0) You can use casting for this. If none are integers, do not print anything. You can assume that none of the inputs is larger than the largest int or smaller than the smallest. Print them on one line separated by a &quot;, &quot; (a comma and then a space.). You can do this by putting the separator before every number except the first.</li>
+  <li>Find  and print the minimum number in the input stream</li>
+  <li>Find and print the average of all the  negative numbers or 0 if there are no negative numbers</li>
+</ul>
+<p>You will only read the inputs one time and do all the processing as you go. No arrays yet.</p>
+<p>The outputs should be on separate lines and in this order</p>
+<ul>
+  <li>the minimum number</li>
+  <li>the integers (or nothing)</li>
+  <li>the average of all the  negative numbers or 0 if there are no negative numbers<br>
+    <br />
+  </li>
+</ul>
+<p>If there were no inputs at all, just print &quot;no input&quot; and nothing else</p>
+<p>Hint: To find the minimum number,  you can should initialize a variable (min) to the first input. Use a boolean flag <code>first</code> initializes to true. If <code>first</code> is true (this is the first time through the loop), initialize the min to this first input and set <code>first</code> to false. After that when you read a number, you can use the find minimum algorithm.</p>
+</p>
+<p><a href="http://www.codecheck.it/files/19072602401qoomuoqgdjhiscwgdjwb4ysu">Codecheck URL</a></p>
+<p style="background-color: #ccffff">7B </p>
+<p>Complete the class <code>NightSky</code>  to represent the night sky with stars and a moon. Represent the sky with a Rectangle filled with Color.DARK_GRAY. Represent the stars with a small circle  filled with COLOR.WHITE. Represent the moon with a larger circle  filled with Color.LIGHT_GRAY. </p>
+<p> Declare and use constants these constants</p>
+<p> <code>final int MAX_X = 400;<br>
+  final int MAX_Y = 300;<br>
+  final int MIN_X = 0;<br>
+  final int MIN_Y = 0;<br>
+  final int NUMBER_OF_STARS = 50;<br>
+  final int DIAMETER_OF_STAR = 3;<br>
+  final int DIAMETER_OF_MOON = 20;</code></p>
+<p>First create and fill the Rectangle. It is at (MIN_X, MIN_Y) and its width than height are MAX_X and MAX_Y</p>
+<p>Use a loop to draw 50 stars  at random locations. Make the x coordinate a random number between 0 (inclusive) and 400 (exclusive), Make the y coordinate a random number between 0 and 300 (exclusive). This x, y is the upper left hand corner of the bounding rectangle. Use DIAMETER_OF_STAR as the width and height of the Ellipse.</p>
+<p>After you have drawn all the stars, draw the moon at the location of the star with the smallest y value. . If more than one star has the minimum y, use the first one with that y as the smallest. You will need to keep track of the smallest star as you go. I declared this before the loop:</p>
+<p>Ellipse minStar  = new Ellipse(0, MAX_Y, 0, 0); </p>
+<p>In the starter file, I have created a <code>Random</code> object for you with a seed. Be sure to use it. Because of the seed, the <code>Random</code> object will produce the same sequence of numbers every time the program is run so your drawing will always look the same (and will pass Codecheck). Do not change the seed.</p>
+<p>Generate the random values in this order: x coordinate, y coordinate. That way we will all get the same values</p>
+<p>You must use a loop. Do not have 50 lines of code each of which draws an ellipse.</p>
+<p>The draw method is an accessor. No variables should be mutated. More specifically, the color of the Graphics2D object should be the same after the draw method as executed;</p>
+<p><a href="http://www.codecheck.it/files/19072603327ie9xonphu35gphnkwr8wkaso">Codecheck URL</a></p>
+<p style="background-color: #ccffff">7C </p>
+<p>In this problem you will model a tile floor. The tile floor consists of  some number of rows of (filled) colored squares. Each row contains some number of squares. Each square has a side of 10 pixels and is separated from its neighbors by 3 pixels. Each square is a random color: either red, green, blue, black, and cyan. Complete the class <code>TileFloor</code>. Use the constants defined for you in the starter code. You must use nested loops. Draw the rows and then the columns to match Codecheck output.</p>
+<p>For the colors, use the Color constants in the <code>Color</code> class. (<code>Color.RED</code> etc)</p>
+<p>The <code>TileFloor</code> will have two constructors</p>
+<ul>
+  <li><code>public TileFloor( int x, int y)</code> where x and y are the coordinates of the upper left-hand corner of the floor. Create a Random object using the constructor that takes a seed. (Done for you) Use 8 as the default number of rows  and 6 as the default the number of columns. (Use the constants defined for you in the starter) Do not draw in the constructor.</li>
+  <li><code>public TileFloor( int x, int y, int rows, int columns)</code> where <em>x</em> and <em>y</em> are the coordinates of the upper left-hand corner of the floor. <em>rows</em> is the number of rows and <em>columns</em> is the number of squares in each row.  Create a Random object using the constructor that takes a seed. (Done for you) . Do not draw in the constructor.</li>
+</ul>
+<p>The <code>TileFloor</code> will have  these methods</p>
+<ul>
+  <li><code>public void draw(Graphics2D g2)</code> draws the floor with the  rows  filled squares at the  x, y coordinates. Use a nested loop</li>
+  <li><code>private Color randomColor() </code>randomly returns a Color object either red, green, blue, black, or cyan. Use the Random object you created in the constructor to determine which to return. You need to use if / else if / else statement structure. </li>
+  <li><code>public void setX(int x)</code> sets a new x coordinate. (Implemented for you)</li>
+  <li><code>public void setY(int y)</code> sets a new y coordinate. (Implemented for you)</li>
+</ul>
+<p>There is trick you can use to determine which color to return. Notice each color has been assigned an integer 0 to 4 in the constants. You can generate a random number between 0 (inclusive) and 5 (exclusive). If the random number is RED (0), return Color.RED. If the random number is GREEN (1), return Color.GREEN. Use  the defined constants, not the numbers 0, 1 etc.</p>
+<p>Because the Random object is created with a seed, you will all get the same drawing every time. That is so Codecheck can check it.</p>
+<p><a href="http://www.codecheck.it/files/1907260353ak3rzmvj36eu3ucu7qvvey51q">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework07.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:24 GMT -->
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework11.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:25 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 11</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">11A </p>
+<p>Implement a subclass of <code>Product</code> called <code>Chips</code>. A <code>Chips</code> has a int instance variable, sodium, in addition to description and price. <em>sodium</em> is the number (int) of milligrams of sodium in a serving of this <code>  Chips</code>. The American Heart Association says that the ideal diet contains less than 1500 mg of sodium a day.Define a constant for this value</p>
+<p>Provide the instance variable and methods ( and no additional methods)</p>
+<ul>
+  <li><code>public int getSodium()</code></li>
+  <li><code>public double percentOfDailyAmount()</code> returns the percentage of the ideal daily amount of sodium in a serving of this Chips</li>
+  <li><code>public String getDescription()</code> returns the description of the Chips then a space and the amount of sodium. Use <em>super</em></li>
+</ul>
+<p>Do not redefine price or description in Chips.</p>
+<p>Provide Javadoc. Use @Override for the overridden getDescription method</p>
+<p><a href="http://www.codecheck.it/files/19080202546311zn5phbkuderojpp3q1l7m">Codecheck URL</a></p>
+<p style="background-color: #ccffff">11B </p>
+<p>You are given a <code>BankAccount</code> class. You are to write two subclasses: <code>StudentAccount</code> and <code>NewWorldAccount</code></p>
+<p><code>BankAccount</code>:</p>
+<p>This class is provided for you. It is different from earlier versions in that it requires a minimum balance of $1500. There is a $10.00 fee for any month where the ending balance is below the minimum balance. There is an endOfMonth method to handle end of month processing. Its subclasses will handle end of month processing differently.</p>
+<p><code>StudentAccount</code>:</p>
+<p>This account is a subclass of <code>BankAccount</code> designed for the student with a low balance and who has only a few transactons (deposits and withdrawals) a month. It has no minimum balance, but there is a charges for every transaction after a certain number of free transactions. At the current time, the number of free transactions is 5 and the charge is a $3.00 for every transaction after that amount. Both deposits and withdrawals are transactions. There is no charge to get the balance. The fees are subtracted during end of month processing. Define and use constants. </p>
+<p><code>NewWorldAccount</code>:</p>
+<p>This account is a subclass of <code>BankAccount</code>. In this type of account, you promise to leave the money in the bank for a specified about of time.   (This time is called the time to maturity). Interest is paid on this type of account. The interest is  compounded monthly. Interest is paid on the ending balance during end of month processing. The current  interest rate is 1.1% per year compounded monthly. </p>
+<p>  The constructor takes an additional parameter: the amount of time you must leave the money in the bank in months as an int. This time desreases with each end of month processing. The penalty for early withdrawal is 20% of the amount withdrawn. The penalty is subtracted from the account immediately. If the account has a balance of $1000 and you withdraw $100 early, the account balance would be $880 + interest</p>
+<p>Interest is added during end of month processing.   There is no penalty for depositing money, but it must stay on deposit until the maturity date. Define and use constants Do't use magic numbers.</p>
+<p>Provide a method <code>getTimeToMaturity</code> that returns the amount of time the money remaining before the money can be withdrawn penalty-free.</p>
+<p>Provide Javadoc. You can use @Override for overridden methods</p>
+<p><a href="http://www.codecheck.it/files/19080404135mg5r3po9fz0vo08i1jce7c4m">Codecheck URL</a></p>
+<p style="background-color: #ccffff">11C </p>
+<p>You are given a class <code>Critter</code> which represents an animal. <code>Critter</code> class will be the superclass of a set of subclasses classes. A <code>Critter</code> has a weight and a position on a number line. The constructor initializes the position to 0 and sets the weight from the parameter. <code>Critter</code> has an ArrayList of Strings to keep a log of its activities. It has <a href="critter_doc/index-2.html">other methods which you can view here </a></p>
+<p>You are to implement the following subclasses of <code>Critter</code></p>
+<p><code>OverAchievingCritter</code>: A <code>OverAchievingCritter</code>  always does more than asked. If  you tell an <code>OverAchievingCritter</code> to move 5,  it will actually move 10 steps. You will override the move method.</p>
+<p><code>LethargicCritter</code>: A <code>LethargicCritter</code> only has two activities: eat and sleep. When asked to move, it will either eat or sleep. A <code>LethargicCritter</code> is created hungry so the first time its move method is called, the <code>LethargicCritter</code> should eat. (and add the word "eat" to the history. The next time the move method is called, the <code>LethargicCritter</code> will sleep (and add the word "sleep" to the history). It will continue to alternate activities in this manner.</p>
+<p><code>UnpredictableCritter</code>: A <code>UnpredictableCritter</code> is very stubborn. It only moves when it feels like it. You will override the move method. If you call the <code>UnpredictableCritter</code>'s move method, sometimes it will move and sometimes it will not. The decision is totally random. In the conctructor construct a Random object with a seed 543212345. You can use Random's nextBoolean method or nextInt with a parameter of 1 to help you determine if the Critter should move.</p>
+<p>Note: There are two testers for this problem.</p>
+<p>Provide Javadoc. You can use @Override for overridden methods</p>
+<p><a href="http://www.codecheck.it/files/19080222193b3bnz0p3ezmmwh5lrj69a4tv">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework11.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+</html>

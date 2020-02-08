@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework17.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 17</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">17A </p>
+<p>Write a class <code>StudentManager</code> which uses a Map to associate students's names and their letter grades. Both the keys (names) and the values (letter grades) are Strings. </p>
+<p>The constructor initializes an empty map.</p>
+<ul>
+  <li><code>public StudentManager()</code></li>
+</ul>
+<p>Provide methods</p>
+<ul>
+  <li><code>public void add(String name, String grade)</code>  adds the student name and grade to the map</li>
+  <li><code>public void remove(String name)</code>  removes the association of this name and gpa</li>
+  <li><code>public int getClassSize() </code>gets the number of students in the class</li>
+  <li><code>public String getPrintableRoster() </code>gets the names of the students in alphabetical order and their grades in the format below</li>
+</ul>
+<p>Anisa: A <br>
+Carlos: B+<br>
+    James: A-
+</p>
+<p><a href="http://www.codecheck.it/files/1704070343gi2h8wv9r24f8ewzxz2z9twg">Codecheck URL</a></p>
+<p style="background-color: #ccffff">17B </p>
+<p>Write a program <code>FindingDuplicates</code> to search a file to see if it contains any words that have the same hash code. Read the file with a Scanner and use a data structure that maps the hashcode to a set of words with that hashcode. At the end, print out words  that have the same hash code on the same line in lexicographical order. (That will be any set with a length greater than 1)</p>
+<p>Finally print the number of duplicates divided by the number of words. It will be a really small number. That is the percentage of collisions.</p>
+<p>Set the delimiter to use: <code>scan.useDelimiter(&quot;[^A-Za-z0-9_]+&quot;);</code></p>
+<p>The <a href="http://www.gutenberg.org/ebooks/2600" target="_blank">book to search</a> is at this URL. Download the plain text and save it in your project as "war_and_peace.txt". The book is &quot;War and Peace&quot; - so there will be lots of words. (586,914). </p>
+<p>You can just declare that the main method throws FileNotFoundException. No need for a try/catch</p>
+<p><a href="http://www.codecheck.it/files/190804170126tmhierya5lva6q8vey3a2dm">Codecheck URL</a></p>
+<p style="background-color: #ccffff">17C </p>
+<p>Write an application <code>IndexMaker</code> which reads a simplified Java source file and produces an index containing  identifiers . Print all the identifiers and all the line numbers on which each identifier occurs. But do not print reserved keywords. When you find an identifier, compare it against a list of reserved keywords and skip keywords. Be smart about this and do not use 50 if statements. Put the keywords in a data structure and check each identifier to see if it is in the collection. <a href="http://www.laughton.com/obrien/sjsu/cs49j/files/reserved.txt" target="_blank">Here is a file of reserved keywords</a>. Download it and put in your project. Name it reserved.txt.</p>
+<p>Print the identifiers in lexicographical order. Display the line numbers in numeric order.</p>
+<p>We will assume</p>
+<ul>
+  <li>every string consisting of only letters, numbers, and underscores is either an identifier or reserved keyword. But we are ignoring keywords</li>
+  <li>there are no comments to confuse things</li>
+</ul>
+<p>You will need to set the delimiter: ...useDelimiter(&quot;[^A-Za-z_]+&quot;); For simplicity, there will not be any identifiers that contain numbers.</p>
+<p>Your output should be in this format:</p>
+<p>ProcessRectangle: [4]<br>
+  Rectangle: [2, 9, 11]<br>
+  String: [7]<br>
+  System: [13, 16]<br>
+  args: [7]</p>
+<p>You can simply declare that the main method throws the FileNotFoundException. You do not need to catch it.</p>
+<p>Here are the Java files that are used: <a href="http://www.laughton.com/obrien/sjsu/cs49j/files/ProcessRectangle.java" target="_blank">ProcessRectangle.java</a> and<a href="http://www.laughton.com/obrien/sjsu/cs49j/files/PaintJobCalculator.java" target="_blank"> PaintJobCalculator.java</a>. CodeCheck will process both files.</p>
+<p class="attention">&nbsp;</p>
+<p><a href="http://www.codecheck.it/files/1801172457a06n80md1z30bbs7f3dtiklor">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework17.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+</html>

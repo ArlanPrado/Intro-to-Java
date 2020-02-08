@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework16.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 16</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">16A </p>
+<p>Write a class, <code>TextCondensor</code>, whose constructor takes an<code> ArrayList&lt;String&gt;</code> as a parameter. Save the ArrayList as the only instance variable.</p>
+<p>Provide methods:</p>
+<ul>
+  <li><code>public Set&lt;String&gt; condenseText</code>() which removes  any duplicates and returns an Set&lt;String&gt; containing words without duplicates and in alphabetical order. Think Set</li>
+  <li><code>public int condensedSize()</code> which gets the number of unique elements in the text. Do this efficiently without duplicating code already written. Do not use an unnecessary instance variable.</li>
+  <li><code>public void setList(ArrayList&lt;String&gt; newText) </code>which sets a new list of text</li>
+  <li><code>public double relativeSize() </code>gets the percent the condensed text is of the original ( condensed size / original size) * 100</li>
+</ul>
+<p>Here are the files you will need:</p>
+<pre class="example">humpty.txt:
+
+Humpty Dumpty sat on a wall,
+Humpty Dumpty had a great fall.
+All the king's horses and all the king's men
+Couldn't put Humpty together again.
+
+mary.txt:
+
+Mary had a little lamb, little lamb,
+little lamb, Mary had a little lamb
+whose fleece was white as snow.
+And everywhere that Mary went
+Mary went, Mary went, everywhere
+that Mary went
+The lamb was sure to go.
+
+He followed her to school one day,
+school one day, school one day,
+He followed her to school one day,
+Which was against the rules,
+It made the children laugh and play,
+laugh and play, laugh and play,
+It made the children laugh and play,
+To see a lamb at school.
+
+And so the teacher turned it out,
+turned it out, turned it out,
+And so the teacher turned it out,
+But still it lingered near,
+He waited patiently about,
+ly about, ly about,
+He waited patiently about,
+Till Mary did appear.
+
+"Why does the lamb love Mary so?"
+love Mary so?" love Mary so?"
+"Why does the lamb love Mary so?"
+The eager children cried.
+"Why, Mary loves the lamb, you know,"
+lamb, you know," lamb, you know,"
+"Why, Mary loves the lamb, you know,"
+The teacher did reply
+</pre>
+<p>&nbsp;</p>
+<p><a href="http://www.codecheck.it/files/1811292113evvv9uyq0xnlji93itk8xqbee">Codecheck URL</a></p>
+<p style="background-color: #ccffff">16B </p>
+<p>The sieve of Earthosthenes is an algorithm for finding all the prime numbers less that or equal to a given integer. With a piece of paper the process would be:</p>
+<blockquote>
+  <p>Write down all the numbers less than or equal to n. Cross out all the multiples of 2 (except 2) Cross out all the multiples of 3 ... up to the square root of n. </p>
+</blockquote>
+<p> Be sure  to  use a <strong>set</strong> in your implementation. You can simulate crossing out the multiples by removing the element. Do not use arrays.</p>
+<p>You are to write a class <code>Sieve</code>. </p>
+<p>It has a constructor that takes as a parameter the upper limit for the primes</p>
+<ul>
+  <li><code>public Sieve(int upperLimit)</code></li>
+</ul>
+<p>It has methods</p>
+<ul>
+  <li><code>public Set&lt;Integer&gt; getPrimes()</code> which returns a set containing all the primes less than or equal to the upper limit. The numbers should be in increasing order. Implement the algorithm using a set.</li>
+  <li><code>public void setUpperLimit(int newLimit)</code> which sets a new upper limit for this sieve</li>
+  <li><code>public int primeCount()</code> which returns the number of primes that are less than the upper limit. Do this efficiently without duplicating code already written. (That is, this method should call the <code>getPrimes</code> method rather than finding the primes itself)</li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="http://www.codecheck.it/files/1704030134dpwqkajzckrj6dza76h5vvriv">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework16.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+</html>

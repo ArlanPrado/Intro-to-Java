@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework08.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:24 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 8</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">8A </p>
+<p>Write a class <code>Rectangles</code> which manages an array of <code>Rectangle </code>objects.</p>
+<p>The constructor of the <code>Rectangles </code>takes an array of <code>Rectangle </code>objects. You can assume the array is filled</p>
+<p>Provide these methods</p>
+<ul>
+  <li>An <code>averageArea</code> method that returns the average area of the <code>Rectangle objects</code> in the array. Only divide one time</li>
+  <li>A method <code>swapMaxAndMin</code> which swaps the Rectangle with the largest area with the one with the smallest area in the array. Only use one loop</li>
+  <li>A method <code>toString</code> which returns the string representation of the underlying array. (You can use Arrays.toString)</li>
+</ul>
+<p>Provide javadoc</p>
+<p><a href="http://www.codecheck.it/files/190727221845efk248dycxal34ltdv3qa7n">Codecheck URL</a></p>
+<p style="background-color: #ccffff">8B </p>
+<p>You are going to to work with a partially filled array in this problem. Write a class to manage an array of Strings. Call the class <code>WordProcessor</code>. <code>WordProcessor</code> constructor takes no parameters but initializes the array so it can hold 8 elements. Define a constant for 8, perhaps INITIAL_CAPACITY.</p>
+<p>Provide methods:</p>
+<ul>
+  <li><code>public void add(String toAdd)</code> adds the given string at the end of the partially filled array. </li>
+  <li><code>public void add(String toAdd, int index)</code> adds the String at the specified index. Grow the  array by doubling its size if necessary and then add the element</li>
+  <li><code>public void removeAdjacentDuplicates() </code>If elements at adjacent indexes are equal, remove one</li>
+  <li><code>private void growIfNeeded() </code>checks to see if the array is full. If it is, it doubles the size of the array and copies the elements to a the new array in the same order.</li>
+  <li><code>public String toString()</code> returns a string representation of the array. The string starts with &quot;[&quot; and ends with &quot;]&quot; The elements of the array are separated by commas. There should be no comma at the beginning or end of the list.</li>
+</ul>
+<p><a href="http://www.codecheck.it/files/1611230400ckbub5adsm8a5zgv6surmpr2l">Codecheck URL</a></p>
+<p style="background-color: #ccffff">8C </p>
+<p>For this problem you will create a crude temperature map. A <code>TemperatureMap</code> class indicates areas of different temperature by the use of different colors. Our map will represent a square area. The temperatures are contained in a 2d int array. Each element in the array represents the temperature in a square  area 20 miles on a side. We assume the temperature is the same through-out the area. </p>
+<p>The constructor takes a 2d array of ints as a parameter</p>
+<p>Provide these methods:</p>
+<ul>
+  <li><code>public void drawMap(Graphics2D g2) </code>creates a map consisting of  colored squares. Each square represents the temperature indicated by an element in the array. There is a one-to-one correspondence between the array elements and the squares on the map. The upper left hand corner of the map is at (0, 0). The squares are 10 px X 10 px. Draw the rows and then the columns. Use the Graphics2d Rectangle method - not fillRect</li>
+  <li>The color of the square is determined as follows:
+    <ul>
+    <li>Color.BLUE if the temperature is less than or equal 32&deg;</li>
+    <li>Color.GREEN if the temperature is greater than  to 32&deg; and less than or equal to 50&deg;</li>
+    <li>Color.ORANGE if the temperature is greater 50&deg; but less than or equal to 85&deg;</li>
+    <li>Color.RED if the temperature is greater than 85&deg;</li>
+    </ul>
+  </li>
+  <li>Write a private helper method to get the color.</li>
+  <li><code>public int maxDifference()</code> gets the difference between the highest and lowest points in the map as a positive number.</li>
+</ul>
+<p>The map will look like this</p>
+<p><img src="../images/hw8c_output.png" width="268" height="355" alt="map"><br>
+</p>
+<p><a href="http://www.codecheck.it/files/1611231837dpfny3jvyi41t4vaplrjfiscb">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework08.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:25 GMT -->
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework10.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:25 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 10</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">10A </p>
+<p>In this problem you will write several static methods to work with arrays and ArrayLists. Remember that a static method does not work on the instance variables of the class. All the data needed is provided in the parameters. Call the class <code>ArrayUtil</code>. Notice how the methods are invoked in <code>ArrayUtilTester</code>.</p>
+<ul>
+  <li><code>public static int min(int[] array)</code> gets the minimum value in the array or Integer.MIN_VALUE if the array has no elements</li>
+  <li><code>public static int contains(String[] array, String letter)</code>gets the number of   words in the array that starts with the given letter. The comparison is case-insensitive. 'A' and 'a' are counted as the same letter</li>
+  <li><code>public static ArrayList&lt;String&gt; contains(String[] list, char letter)</code>gets an ArrayList of all the strings in the given array that contain  the given letter. The comparison is case-insensitive. 'A' and 'a' are counted as the same letter</li>
+</ul>
+<p>The last two methods are an example of overloading.</p>
+<p>Provide Javadoc. Look at the documentation produced for <code>Util</code>. (Click Project / Generate Javadoc) The Javadoc utility works on static methods, too.</p>
+<p><a href="http://www.codecheck.it/files/19072824008257h7vp5ft2xzq1fi019pffe">Codecheck URL</a></p>
+<p style="background-color: #ccffff">10B </p>
+<p>In this problem you will implement a solution using the design pattern for collecting objects. We are going to model a bank. A <code>Bank </code>uses an ArrayList to keep track of <code>BankAccount</code> objects. You will write the <code>Bank</code> class
+<p>The <code>BankAccount </code> class is provided for you. A BankAcount has a  balance and a accountId. </p>
+<p>A <code>Bank</code> has a constructor that takes no parameters. It needs to initialize the ArrayList used to collect bankAccounts</p>
+<p>It has methods</p>
+<ul>
+  <li><code>add</code> adds the specified <code>BankAccount</code> to the <code>Bank</code></li>
+  <li><code>largestFirst</code> puts the <code>BankAccount</code> with the largest balance first in the list. If two have the same large balance, use the first one encountered in the list</li>
+  <li><code>contains</code> determines if a <code>BankAccount</code> with a given accountId is in the <code>Bank</code>. Return true is so, otherwise false</li>
+  <li><code>list</code> gets an ArrayList of the <code>BankAccount</code> accountIds in the <code>Bank </code>that have balances over the specified amount. </li>
+  <li><code>list</code> gets an ArrayList of the <code>BankAccount</code> accountIds in the <code>Bank</code></li>
+</ul>
+<p>Provide Javadoc.</p>
+<p><a href="http://www.codecheck.it/files/16112722565ac23jkpbami8wfgxyxopfm6b">Codecheck URL</a></p>
+<p style="background-color: #ccffff">10C </p>
+<p>In this problem you are going write a class to model a traffic light that can cycle through colors, red, green, yellow. To do this, you will have to maintain the state of the traffic light. Maintaining state is one of the design pattern discussed in this week's lesson. The state of the <code>TrafficLight</code> indicates which light is lit. It changes every time the <code>TrafficLight</code> cycles. </p>
+<p>Specification</p>
+<p>TrafficLight will have a constructor that takes the x and y coordinates of the upper left hand corner of the rectangular part of the traffic light as parameters. The TrafficLight is black rectangle at the x,y coordinates with a width of 20 and a height of 60. There are red, green, and yellow circles inside the rectangle to look like a traffic light. The upper left hand corner of the red circle will be at same x,y coordinates as the box. The circles will touch the sides of the box and each other</p>
+<p>Define an instance variable to hold the state (which light is lit). Make it an int. And define public constants for red, green, and yellow, named RED, GREEN, YELLOW (These will be ints also)</p>
+<p> The constructor takes the x,y coordinates of the upper left hand corner of the TrafficLight as parameters and also sets the state of the light to red (using the constant). </p>
+<p>Provide methods</p>
+<ul>
+  <li><code>public void cycle()</code>  changes the state (the color) in the following manner <br><br>
+    <table width="25%" border="2" cellspacing="1" cellpadding="1">
+  <tr>
+    <th width="55%" scope="col">If the state was</th>
+    <th width="45%" scope="col">now it is</th>
+  </tr>
+  <tr>
+    <td>red</td>
+    <td>green</td>
+  </tr>
+  <tr>
+    <td>green</td>
+    <td>yellow</td>
+  </tr>
+  <tr>
+    <td>yellow</td>
+    <td>red</td>
+  </tr>
+</table>
+    <br>
+  </li>
+<li><code>public String getLight()</code>gets the color (the current state) of the light as a string &quot;red&quot;,  &quot;green&quot; or  &quot;yellow&quot;</li>
+<li><code>public void draw(Graphics2D g2)</code> draws the traffic light and fills the circles with a different color when the light is on or off  (Draw the rectangle first)<br><br>
+<table width="30%" border="2" cellspacing="1" cellpadding="1">
+  <tr>
+    <th scope="col">Color Name</th>
+    <th scope="col">On Color</th>
+    <th scope="col">Off RGB</th>
+  </tr>
+  <tr>
+    <th scope="row">red</th>
+    <td>Color.RED</td>
+    <td>128,00,00</td>
+  </tr>
+  <tr>
+    <th scope="row">green</th>
+    <td>Color.GREEN</td>
+    <td>85,107,47</td>
+  </tr>
+  <tr>
+    <th scope="row">yellow</th>
+    <td>Color.YELLOW</td>
+    <td>255,165,00</td>
+  </tr>
+</table>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p>Output of final will look like this</p>
+<p><img src="../images/hw10c_output.png" width="297" height="201" alt="output for hw 10"></p>
+<p>Provide Javadoc</p>
+<p><a href="http://www.codecheck.it/files/1611270504ay9rp4f6jbg8x2s82ty9x5r7c">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework10.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:25 GMT -->
+</html>

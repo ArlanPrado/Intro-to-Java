@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework06.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:24 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 6</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">6A </p>
+<p>Make a class <code>Verb</code> to represent a verb in English. <br>
+</p>
+<p>Define a constructor that takes a String as as a parameter<br>
+</p>
+<p>Provide the  methods:<br>
+  <code>getVerb()</code> - returns the actual verb<br>
+<code>getPast() </code>- returns the past tense of the verb.</p>
+<p>Simplified and imprecise rules for forming past tense of verbs:<br>
+</p>
+<p>While most verbs add &quot;ed&quot; to form the past tense, there are irregular verbs and other special cases.</p>
+<p><strong>Irregular verbs</strong></p>
+<table width="30%" border="1" cellspacing="1" cellpadding="1">
+  <tr>
+    <th scope="col">Verb</th>
+    <th scope="col">Past tense</th>
+  </tr>
+  <tr>
+    <td>run</td>
+    <td>ran</td>
+  </tr>
+  <tr>
+    <td>ride</td>
+    <td>rode</td>
+  </tr>
+  <tr>
+    <td>see</td>
+    <td>saw</td>
+  </tr>
+</table>
+<p><strong>Special cases</strong></p>
+<ul>
+  <li>If the verb ends in a &quot;y&quot;, change the &quot;y&quot; to &quot;i&quot; and add &quot;ed&quot;.
+    <ul>
+      <li>past tense of try is tried</li>
+    </ul>
+  </li>
+  <li>If the verb ends in an &quot;e&quot;, just add &quot;d&quot; rather than &quot;ed&quot;
+    <ul>
+      <li>past tense of hope is hoped</li>
+    </ul>
+  </li>
+  <li>If the verb is three characters long and ends in a consonant, double the consonant and add &quot;ed&quot;
+    <ul>
+      <li>past tense of hop is hopped</li>
+    </ul>
+  </li>
+</ul>
+<p><strong>In all other cases, add &quot;ed&quot;</strong></p>
+<p class="attention">Note: only use one return statement in getPast(). </p>
+<p>Provide  Javadoc for the class, the methods and the constructor.</p>
+<p><a href="http://www.codecheck.it/files/16111904076b4z83j9jw7vlc6z63g3lqsyd">Codecheck URL</a></p>
+<p style="background-color: #ccffff">6B </p>
+<p>Write a class <code>SemiCircle</code> that represents the northern half of a circle in 2D space<span class="attention"> used in Java grapics where the upper left hand corner is (0,0) (modified 2/20)</span>. A SemiCircle has  center coordinates and a radius. </p>
+<p>Define a constructor:</p>
+<ul>
+  <li><code>public SemiCircle(int centerX, int centerY, int theRadius)</code><br />
+  </li>
+</ul>
+<p>Implement the following methods:</p>
+<ul>
+  <li><strong>public boolean contains(int otherX, int otherY)</strong><br />
+returns true if the point given by the coordinates is inside the SemiCircle. Otherwise it returns false. Note: the point will be contained in the SemiCircle if the distance from the center to the print is less than the radius and the point is above the diameter. A point on the circumference or diameter is not contained in the SemiCircle.</li>
+  <li><strong>public boolean intersects( SemiCircle other) </strong><br />
+  returns true if the two SemiCircles intersect; otherwise it returns false. Two semicircles &quot;intersect&quot; if at least one, but not all three of the western, northern, and eastern extreme points of one semicircle are contained in the other. This means they do not intersect if one is completely contained in the other or if the extreme point only touches the other semicircle.<br />
+  </li>
+</ul>
+<p>Look at the drawing below. The western, northern, and eastern extreme points of the top semicircle are labeled W, N, and E respectively. </p>
+<p>In the lower drawing:</p>
+<p> The three larger semicircles all intersect </p>
+<ul>
+  <li>The W point of the green one is inside the black one =&gt; green and black intersect.</li>
+  <li>The N point of the red one is inside the green one =&gt; green and red intersect.</li>
+  <li>The E point of the black one is inside the red one =&gt; black and red intersect.<br />
+  </li>
+</ul>
+<p>The small blue semicircle does not intersect with any of the large ones.</p>
+<ul>
+  <li>The blue semicircle and the black one have no points in common =&gt; they do not intersect</li>
+  <li>The blue one and the green one have no  points in common =&gt; they do not intersect</li>
+  <li>The blue one is completely contained in the red one =&gt; they do not intersect</li>
+</ul>
+<p><img src="../images/6b_semicircle_drawing2.png" alt="sceen shot" width="208" height="303" border="0" /></p>
+<p>Provide Javadoc</p>
+<p><a href="http://www.codecheck.it/files/16111904551117w0gmam29y059r7ugrf3b5">Codecheck URL</a></p>
+<p style="background-color: #ccffff">6C </p>
+<p>The Java Beach Resort has two types of suites: Ocean View and Street Side. The suites can accommodate either two, 4 people, or more. The rates are higher in summer than in the winter. Write an application that can determine the cost of a suite. Suite charges are in the given table.</p>
+<p>Type of suite is specifies as &quot;Ocean&quot; or &quot;Street&quot; and is case insensitive</p>
+<p>The season is  &quot;Summer&quot; or &quot;Winter&quot; and is case insensitive</p>
+<table border="2" cellspacing="2" cellpadding="2">
+  <tr>
+    <th scope="col">&nbsp;</th>
+    <th colspan="2" scope="col">Ocean</th>
+    <th colspan="2" scope="col">Street</th>
+  </tr>
+  <tr>
+    <th scope="row">&nbsp;</th>
+    <td><strong>2 people</strong></td>
+    <td><strong>4 people</strong></td>
+    <td><strong>2 people</strong></td>
+    <td><strong> 4 people</strong></td>
+  </tr>
+  <tr>
+    <th scope="row">Summer</th>
+    <td>$250</td>
+    <td>$370</td>
+    <td>$200</td>
+    <td>$325</td>
+  </tr>
+  <tr>
+    <th scope="row">Winter </th>
+    <td>$175</td>
+    <td>$315</td>
+    <td>$150</td>
+    <td>$210</td>
+  </tr>
+</table>
+<p>Write a class <code>Suite</code>. It has a constructor that takes three parameters:</p>
+<ul>
+  <li><code>public Suite(String view, String season, int occupants)</code>Note: you should not change the case of the instance variable when initializing</li>
+</ul>
+<p>It also has a method:</p>
+<ul>
+  <li><code>public double getCost() </code></li>
+</ul>
+<p>The cost is based on the table above. One person costs the same as two people and three people cost the same as 4 people. For more than 4 people, the charge is a flat $200  per  person for every room. If view is a String other than &quot;Ocean&quot; or &quot;Street&quot;, charge the rate for &quot;Ocean&quot;. If the season is anything other than &quot;Summer&quot; or &quot;Winter&quot;, charge the rate for &quot;Summer.&quot; Use nested if statements. If there is an error in the number of people, set cost to 0.</p>
+<p>Provide Javadoc</p>
+<p><a href="http://www.codecheck.it/files/19072103289pidywcmxzfjjm4ea811v2cpr">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework06.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:24 GMT -->
+</html>

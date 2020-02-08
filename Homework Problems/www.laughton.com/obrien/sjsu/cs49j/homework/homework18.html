@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework18.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework</title>
+</head>
+
+<body>
+<h1> CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">A </p>
+<p>Write a simplified application to illustrate the use of an undo button for a word processor. It keeps a history of all items and allows the user to undo the last. </p>
+<p>Write a class <code>UndoStack</code>. </p>
+<p>Implement using a <code>Stack</code> of Strings. The constructor will create an empty <code>Stack</code> to keep   the history.</p>
+<p>A<code> UndoStack </code>has these methods:</p>
+<ul>
+  <li><code>public void add(String phrase) </code>adds the phase to the history of the <code>UndoStack</code></li>
+  <li><code>public String undo() </code>removes the last thing added or null if there is nothing in the history to undo. Note that this method violates the rule that a method is not both a mutator and an accessor. Also trying to remove an item form an empty stack causes an exception</li>
+  <li><code>public void undoAll() </code>removes all items from the history</li>
+</ul>
+<p>&nbsp;</p>
+<p><a href="http://www.codecheck.it/files/17050415451csldwjahxt2kwn73ahd6vukt">Codecheck URL</a></p>
+<p style="background-color: #ccffff">B </p>
+<p>In this problem you will do a better implementation of the to do list. Write a class <code>ToDoList</code> that maintains a priority queue to manage the items to be done.</p>
+<p>Write a class <code>ToDoItem</code>. <code>ToDoItem</code> has a description  and a priority. The constructor takes these as parameters in that order. </p>
+<p><code>ToDoItem</code> implements Comparable interface and has these methods</p>
+<ul>
+  <li><code>get</code> methods(accessors) for priority and description</li>
+  <li><code>equals</code> method. Two items are equal if and only if they have both the same priority and description</li>
+  <li><code>compareTo</code> method orders by priority. If priorities are equal, order by description. </li>
+  <li><code>toString</code> returns a String representation of the ToDoItem in this format:
+  <pre class="example">ToDoItem[description=see friends,priority=1]</pre></li>
+</ul>
+<p>Write the class <code>ToDoList</code>. Its constructor  initializes an empty PriorityQueue.</p>
+<p><code>ToDoList</code> has these methods</p>
+<ul>
+  <li><code>public void add(ToDoItem item)</code> Adds an item for this ToDoList</li>
+  <li><code>public ToDoItem nextItem()</code> removes and returns the next item to do. (The one with the priority closest to 1). Note that this also violates the rule about mutators not returning values</li>
+  <li><code>public boolean hasNext() </code>returns true if there is at least one  item left to do otherwise false</li>
+  <li><code>public ToDoItem peek()</code> returns the next item to do but does not remove it from the list</li>
+</ul>
+<p><a href="http://www.codecheck.it/files/170505025354kqve42h50h3ctq8mc3rjw3z">Codecheck URL</a></p>
+<p style="background-color: #ccffff">&nbsp;</p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework18.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+</html>

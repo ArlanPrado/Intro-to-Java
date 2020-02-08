@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework04.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:24 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 4</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p class="attention">Remember not to create packages. Use the default package</p>
+<p>In these problems, you will revisit  problems from hw2 and represent the shapes with classes so that multiple objects can be drawn.</p>
+<p>There are only 2 problems this week.</p>
+<p>Note: for a quirky reason, the viewer class must import  javax.swing.JFrame  rather than javax.swing.*;.</p>
+<p style="background-color: #ccffff">4A </p>
+<p>In this problem you will write a <code>Stripes</code> class which will draw a a set of colored stripes at a specified (x, y). </p>
+<p><code>Stripes</code> will have a construct that takes the x, y coordinates of the upper-left hand corner of the set of stripes as well as the height of a color. </p>
+<p><code>Stripes </code>will have a draw method which takes the graphical context as a parameter and draws the set of stripes.</p>
+<p> The height of a rectangle is given in the constructor. The width of a rectangle is 5 times the height of a rectangle. The colors of the first 5 should be made with the pre-defined colors in the Color class. Use red, orange, yellow, green, and blue in that order. The next color is indigo and has RGB values (75, 0, 130). The last rectangle is violet with RGB values of (143, 0, 255). You will need to construct Color objects using these values. There are 7 rectangles.</p>
+<p>You will also complete the <code>StripesComponent</code> class to construct and draw three <code>Stripes</code> objects given these criteria</p>
+<ul>
+  <li>Upper left-hand corner at 0,0. Height of 20</li>
+  <li>Upper left-hand corner at 100, 180. Height of 10</li>
+  <li>Upper left-hand corner at 0, 200. Height of 5</li>
+</ul>
+<p><code>StripesViewer</code> is provided. </p>
+<p><a href="http://www.codecheck.it/files/19072301297iv9kjnluozaftjd8lgmwn2a7">Codecheck URL</a></p>
+<p style="background-color: #ccffff">4B </p>
+<p>In this application, you will create a <code>ConcentricCircles</code> class. A <code>ConcentricCircles</code> consisting of three concentric circles with specifications listed below</p>
+<p>The constructor takes the x, y coordinates of the center of the <code>ConcentricCircles</code> and the radius of the smallest circle.</p>
+<p>Provide a draw method that follows these specifications</p>
+<ul>
+  <li>The center is at x, y</li>
+  <li>The largest circle is red with a radius of  3 times that of the smallest circle(Use Color.RED)</li>
+  <li>The second circle is white with a radius of 2 times that of the smallest circle. (Use Color.WHITE)</li>
+  <li>The smallest circle is red again with the radius given in the constructor. (Use Color.RED)</li>
+</ul>
+<p>You will also write the <code>ConcentricComponent</code> class to construct and draw two sets of <code> ConcentricCircles</code> objects given  criteria</p>
+<ul>
+  <li>The center is at 50, 60. The small radius is 15 </li>
+  <li>The center is at 30, 150. The small radius is 5</li>
+</ul>
+<p><code>ConcentricViewer</code> is provided. </p>
+<p><a href="http://www.codecheck.it/files/19072301407lx5txy29efvtzb8l9sfm85p4">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework04.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:24 GMT -->
+</html>

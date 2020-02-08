@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework05.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:24 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 5</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">5A </p>
+<p>You have a business painting the insides of planetariums with a special, expensive paint. A planetarium is a circular room with a domed roof (a hemisphere) You charges $95.50 a gallon for paint and a gallon will cover 40 square feet. (If we need a fractional gallon of paint, we only charge for what we use since we can use the remainder on another job)</p>
+<p>You paint both the cylinder and the hemisphere.</p>
+<p>You charge $100 per square yard for labor plus the cost of the paint.</p>
+<p>Your job in this program is to finish the class, <code>PaintJobCalculator</code></p> which can be used to calculate the price you need to charge the customer.</p>
+<p>The constructor takes the height and radius of the cylindrical part of the room as parameters  in that order. (Call them height and radius so the provided methods will work)</p>
+<p>You will write methods:</p>
+<ul>
+  <li><code>public void setHeight(double theHeight) </code>- provided</li>
+  <li><code>public void setRadius(double theRadius) </code>- provided</li>
+  <li><code>public double getSurfaceArea()</code> - get the surface area to paint, cylinder and dome</li>
+  <li><code>public double getPaintCost()</code>- you must use the <code>getSurfaceArea</code> method in this calculation. Only calculate surface area once in the code</li>
+  <li><code>public double getLaborCharge()</code>- you must use the <code>getSurfaceArea</code> method in this calculation. Only calculate surface area once in the code</li>
+  <li><code>public double getCustomerPrice()</code> - you must use the other methods in this calculation. Only calculate surface area, paint cost, and labor in one place</li>
+</ul>
+<p>Provide Javadoc for the class, the constructor, every method, every parameter and every return value..</p>
+<p>Declare and use constants for the price of a gallon of paint, the number of square feet it will cover, and the price you charge per square yard   as constants. </p>
+<p>Declare a constant using  <code>public static final ...</code></p>
+<p>Notice you will need to convert units from square feet to square yards to calculate the labor cost. Use the constant provided in the starter file.</p>
+<br />
+<p><a href="http://www.codecheck.it/files/16111405196p4b685kwjs6s11mb5o4x15dt">Codecheck URL</a></p>
+<p style="background-color: #ccffff">5B </p>
+<p>Stamps R Us makes rubber stamps consisting of a person's initials. You are to write a class <code>Stamp</code>.  A <code>Stamp</code> has instance variables of a first name, middle initial (one letter. No period), and last name.</p>
+<p>There is no starter file. You will write the whole class.</p>
+<p>The <code>Stamp</code> class has two constructors (This is called overloading).</p>
+<ul>
+  <li><code>public Stamp(String theFirst, String theMiddleInitial, String theLast)</code> initializes the instance variables with the values of the parameters. (theMiddleInitial will be exactly 1 character long)</li>
+  <li><code>public Stamp(String theFirst, String theLast) </code>initializes the first and last names to the given parameters and initializes the middle initial to the empty String (two double quotes with no space like this &quot;&quot;)</li>
+</ul>
+<p><code>Stamp</code> class has these methods</p>
+<ul>
+  <li><code>public String getFirst()</code></li>
+  <li><code>public String getMiddleInitial()</code></li>
+  <li><code>public String getLast()</code></li>
+  <li><code>public int characterCount()</code> the number of characters in the full name - not counting spaces</li>
+  <li><code>public String getInitials()</code> gets the initials comprising  the Stamp (first initial, middle initial, last initial) with no spaces</li>
+</ul>
+<p>Do not use an if statement. You do not need it.</p>
+<p>Provide full Javadoc (the class, the constructors, and the methods)</p>
+<p><a href="http://www.codecheck.it/files/16111405565g05x5g5wn7qxwc3goxjt4cyd">Codecheck URL</a></p>
+<p style="background-color: #ccffff">5C</p>
+<p>Write a class<code> AmazonOrder</code> which keeps track of the items a person orders on Amazon. We want to be able to add an item of a specific cost and remove an item of a specific cost. We also want to able able to get the subtotal, total and a string representation of the contents of the <code>AmazonOrder</code></p>
+<p><code>AmazonOrder </code>has a no-argument constructor which initializes the instance variables (subtotal to 0, contents to the empty string)</p>
+<p>It has the following methods:</p>
+<ul>
+  <li><code>public void add(double cost)</code> adds this cost  to the subtotal for this <code>AmazonOrder</code> and records the item added in the contents (see below)</li>
+  <li><code>public void remove(double cost)</code>subtracts this cost from the subtotal for this <code>AmazonOrder</code> and records the item removed in the contents (see below)</li>
+  <li><code>public double getSubtotal()</code> gets the subtotal for this <code>AmazonOrder</code></li>
+  <li><code>getTotal()</code> Gets the total which is the subtotal plus tax. The tax is 8.5%. Define 8.5 as a constant in the <strong>method</strong>. (not as an instance variable</li>
+  <li><code>getContents()</code> returns the string representation of the cost of the items added to and removed from in the order and the total cost. Be sure to call getTotal(). Do not calculate the total in this method.</li>
+  <li><code>reset()</code> returns the object to its original state where no items are in the order. The string representing the items in the order will be set to the empty string and the subtotal will be set to 0</li>
+</ul>
+<p>To add to the order: add the string <em>Add Item</em> or <em>Remove Item</em>,  a colon, a space, and then the value of the transaction and a newline</p>
+<p>The format of the string returned by <code>getContents</code>:</p>
+<p>Add Item: 2.59<br />
+  Add Item: 8.25<br />
+  Remove Item: 2.59<br />
+  Total: 8.95125</p>
+<p>The total is displayed at the end.</p>
+<p> <strong>NOTE: I should get the same output if I call getContents() twice in a row.</strong></p>
+<p>You need to provide a Javadoc comment for your all methods, the constructor and the class itself.</p>
+<p><a href="http://www.codecheck.it/files/16111502442e1unjaadc9pz0ht7rdgceyi0">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework05.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:24 GMT -->
+</html>

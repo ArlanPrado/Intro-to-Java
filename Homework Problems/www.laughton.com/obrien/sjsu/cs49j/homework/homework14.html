@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework14.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+   code {color:green;
+     font-family: "Courier New", Courier, monospace;
+     font-size:1.1em;
+     font-weight:bold;
+   }
+   
+    .attention{
+	  color:red;
+   }
+   
+   .example{
+	  background-color:#CCC;
+	  margin-left:2em;
+   }
+   
+   .draft {background-color:#fffff8;
+      border:thin solid #E37500;
+   }
+   
+</style>
+<title>Homework 14</title>
+</head>
+
+<body>
+<h1>CS49J </h1>
+<p><span class="attention">Remember not to create packages. Use the default package</span></p>
+<p style="background-color: #ccffff">14A </p>
+<p>You are given a text file containing the contents of a shopping cart at a grocery store. The records consists of  a item name (which can be any number of words) a price, and a quantity separated by one or more white spaces. The file has this format:</p>
+<pre>item  price  quantity<br>raman  0.50  5<br>whole wheat bread  2.48  1</pre>
+<p>You are to complete the class called <code>GroceryCart</code>.  </p>
+<p>which will read the items and then print: the name, the price, the quantity, and the extended price. Extended price is the quantity * the price.  Use printf  (page 530 section 11.2.9) to format the output so that it is displayed in columns. The column with the name will be 20 characters wide an left justified. Each of the numbers will 8 characters wide and right justified. Price and extended price should have 2 decimal places. After all items are processed, print the word Total:, a space, a $ and then the total value of all the items in the cart (with 2 decimal places). It will look  like this:</p>
+<pre>raman                   0.33       5    1.65<br>whole wheat bread       2.48       1    2.48<br>edamame                 1.85       2    3.70<br>corn tortillas          0.75       3    2.25<br>apples                  1.00       2    2.00<br>salmon                 11.90       1   11.90<br>paneer                  3.29       1    3.29<br>tofu                    1.75       2    3.50<br>dried chilies           1.05       5    5.25<br>Total: $36.02</pre>
+<p> <a href="http://www.laughton.com/obrien/sjsu/cs49j/files/items.txt">Here is a file</a> that will be used by Codecheck. Copy it into your project.</p>
+<p>Declare that the main method throws an exception when the file is not found.</p>
+<p>Here is a starter. Do not change the file name or remove the //SUB</p>
+<pre class="example">public class GroceryCart
+{
+   public static void main(String[] args) throws FileNotFoundException
+   {
+      String fileName = "items.txt"; //SUB "items2.txt"
+      
+      //your code here
+   }
+}</pre>
+<p><a href="http://www.codecheck.it/files/17010802219e4f1d8ho73c7ng8o3oyk0gqa"><br>
+</a></p>
+<p><a href="http://www.codecheck.it/files/17010802438gedkhn4c4xfq68pwlgwomgwh">Codecheck URL</a></p>
+<p style="background-color: #ccffff">14B </p>
+<p>Here is a text file containing the information about the salaries of the top 10 highest paid CEOs. </p>
+<pre>Ticker	Company	CEO Name	Year	Compensation ($)<br>VRX	Valeant Pharmaceutical International	J. Michael Pearson	2015	$143,077,442<br>MASI	Masimo Corporation	Joe Kiani	2015	$119,222,614<br>SCTY	SolarCity Corporation	Lyndon R. Rive	2015	$77,318,016<br>GBL	Gamco Investors	Mario J. Gabelli	2015	$75,018,176<br>PANW	Palo Alto Networks	Mark D. Mclaughlin	2015	$66,606,716<br>CBS	CBS Corporation	Leslie Moonves	2015	$56,773,822<br>VIAB	Viacom	Philippe P. Dauman	2015	$54,154,312<br>LNG	Cheniere Energy	Charif Souki	2015	$54,041,015<br>ORCL	Oracle Corporation	Mark V. Hurd	2015	$53,245,128<br>REGN	Regeneron Pharmaceuticals	Leonard S. Schleifer 	2015	$47,462,526</pre>
+<p>Write a program <code>CEOSalaries</code> to print a list which contains the ticker symbol, colon space, the name of the CEO, space, and the salary printed with a $ and comma separators. Use printf. The first record looks like this</p>
+<pre>VRX: J. Michael Pearson $143,077,442
+</pre>
+<p>After all the records are printed, print: &quot;Average salary: &quot; and then the average salary with a $ and comma separators and 2 decimal places. </p>
+<p>Note: You need to remove the  $ and commas before using Integer.parseInt to convert a strings to an int. </p>
+<p>The file name will be provided in the command line arguments. This will tell you <a href="http://theopentutorials.com/tutorials/java/cmd-line-args/how-to-pass-command-line-arguments-in-eclipse-ide/">how to use command line arguments in Eclipse</a>.</p>
+<p>Catch the exception if the file does not exist and print this message: No such file: filename</p>
+<p>To process data in a file, you have to exam the file to determine the format of the data. In this case, the name of the CEO can be either two or three words. Company names also varies in length. If the CEO name has three parts, one will be an initial, (like J. in the first entry). The initial may be either the first or the second name. Notice that the last name is the third name from the end</p>
+<p><a href="http://www.codecheck.it/files/1701080658842j9v573yry2meoi4dkc13jb">Codecheck URL</a></p>
+<p style="background-color: #ccffff">14C </p>
+<p>The United States Social Security Administration keeps lists of the most popular baby names by year and by decade. We have two list:, one from the 1900 to 1909 and one 100 years later from the 2000 to 2009. Each contains the top  names for the decade. We want to know what names from the 1900s were still popular in the 2000s.</p>
+<p>Write an application called <code>BabyNames1900sAnd2000s</code> to print two columns in alphabetical order. The first column will contain all the boys names for 1900s that were still popular in 2000s. The second column  will contain all the girls names for 1900s that were still popular in 2000s. Make the columns 30 characters wide and left justified. <strong>The file names will be specified as command line arguments.</strong></p>
+<p>If there are not 2 comand line arguments, print the message:</p>
+<p class="example">Usage: java BabyNames1900sAnd2000s file1 file2</p>
+<p>You can download the files into Eclipse for testing from the following URLs</p>
+<ul>
+  <li><a href="http://www.laughton.com/obrien/sjsu/cs49j/files/babynames1900s.txt">http://www.laughton.com/obrien/sjsu/cs49j/files/babynames1900s.txt</a></li>
+  <li><a href="http://www.laughton.com/obrien/sjsu/cs49j/files/babynames2000s.txt">http://www.laughton.com/obrien/sjsu/cs49j/files/babynames2000s.txt</a></li>
+</ul>
+<p>Here is the file format</p>
+<pre>	Males	Females<br>Rank	Name	Number	Name	Number<br>1	John	84,591	Mary	161,508<br>2	William	69,321	Helen	69,429<br>3	James	62,170	Margaret	57,921<br>4	George	43,589	Anna	54,918<br>5	Charles	36,186	Ruth	51,011
+</pre>
+<p>Do not use try / catch here. Just declare that the method throws an exception</p>
+<p>For full points, design the program so you only read each file one time.</p>
+<p class="attention">Special Note: The second test case test for baby1.txt throws an FileNotFoundException. Your stack trace may be different than mine and Codecheck will not give you a pass. But if you are throwing the exception, you are doing the problem correctly. I will tell the grader to give credit when grading this assignment. The other test cases will not throw exceptions</p>
+<p><a href="http://www.codecheck.it/files/17010904417sjt8pfrszn19003sdj8aylke">Codecheck URL</a></p>
+</body>
+
+<!-- Mirrored from www.laughton.com/obrien/sjsu/cs49j/homework/homework14.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 08 Feb 2020 04:46:26 GMT -->
+</html>
